@@ -1,0 +1,11 @@
+/target
+/resources/clustering/data/*
+/resources/clustering/jupyter/*
+/resources/clustering/jupyter/.*
+!/resources/clustering/jupyter/*.ipynb
+/resources/clustering/matlab/*
+!/resources/clustering/matlab/*.m
+/*.iml
+/.*
+!/.gitignore
+/pom.xml

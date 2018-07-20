@@ -1,0 +1,6 @@
+{:requery   true
+ :matlab    {:max-clusters 30 :average "average" :distance "cosine"}
+ :language  {:phrase-size 50 :phrase-count 1000}
+ :wholeness {:limit 200}
+ :artists   {:artist-count 10 :word-count 20}
+ :out       "out.edn"}
