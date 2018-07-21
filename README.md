@@ -20,10 +20,11 @@ for the detection of clusters of vastly varying sizes.
 ## Output
 
 The clustered dictionary of the musicXmatch dataset can be found in file 
-mxm_clustered_dictionary.txt. A Jupyter notebook (part of this project and also online) 
+[mxm_clustered_dictionary.txt](https://raw.githubusercontent.com/belovehq/msd-languages/master/resources/public/mxm_clustered_dictionary.txt). 
+A [Jupyter notebook](https://nbviewer.jupyter.org/gist/duchenne/77b54f6adb7783848edb9a6e97880c64) 
 explains how the clusters were chosen.
 
-This dictionary is skewed towards the most represented languages in the dataset, 
+Note that this dictionary is skewed towards the most represented languages in the dataset, 
 e.g. the word "in" is classified as English despite belonging to many other languages.
 
 The analysis is based on the musiXmatch dataset, the official lyrics collection 
@@ -33,7 +34,7 @@ for the Million Song Dataset, available at: http://labrosa.ee.columbia.edu/milli
 
 The analysis is written in Clojure.
 
-* The code requires the musiXmatch dataset to have been already loaded into 
+* The code requires the musiXmatch dataset to have been loaded into 
 an H2 SQL database.
  
 * A matrix of word co-occurences is then assembled, with element (i,j) 
@@ -64,8 +65,8 @@ cluster correlates with other words in the dataset.
  of artists for every cluster (naively: top x artists that use the top y words 
  in the cluster)
 
-The output of this computation is an [edn](https://github.com/edn-format/edn) file. A Jupyter notebook is then used to view 
-the output and assess the optimal number of clusters (also online). 
+The output of this computation is an [edn](https://github.com/edn-format/edn) file. 
+A Jupyter notebook is then used to view the output and assess the optimal number of clusters. 
 
 ## Requirements
 
@@ -83,7 +84,7 @@ The Matlab Java engine API should be added to the local Leiningen repository wit
 
 ## Usage
 
-To run the computation with Leinigen: 
+To run the computation with Leiningen: 
 
 * Edit the dependency to Matlab in `project.clj` to match the version of the Matlab engine 
 registered in your local Leiningen repo. 
@@ -122,7 +123,9 @@ from the parameters map.
 
 Once the analysis has run, launch `jupyter notebook` and open the notebook
 in `resources/clustering/jupyter` to explore the results stored in 
-`/resources/clustering/data/out.edn`. See the online version of the notebook.
+`/resources/clustering/data/out.edn`. See the 
+[online copy](https://nbviewer.jupyter.org/gist/duchenne/77b54f6adb7783848edb9a6e97880c64)
+of the notebook.
 
 ## License
 
